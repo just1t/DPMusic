@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<VBox alignment="CENTER" prefHeight="432.0" prefWidth="563.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.just1t.ui.DMController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+       <Text fill="#a68067" strokeType="OUTSIDE" strokeWidth="0.0" text="你爱听的歌：">
+           <font>
+             <Font name="System Bold Italic" size="36.0" />
+           </font>
+       </Text>
+      <HBox prefHeight="48.0" prefWidth="523.0">
+         <children>
+             <!--table-->
+             <TextField fx:id="input" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="333.0" />
+            <Button mnemonicParsing="false" onMouseClicked="#search" prefHeight="30.0" prefWidth="195.0" text="点击进行搜索" />
+         </children>
+      </HBox>
+       <TableView fx:id="table" prefHeight="247.0" prefWidth="523.0" />
+   
+       <Accordion />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+             <Button fx:id="button" mnemonicParsing="false" onMouseClicked="#download" prefHeight="45.0" prefWidth="218.0" text="点击进行下载" />
+            <Button mnemonicParsing="false" fx:id="back" onMouseClicked="#stopPlay" prefHeight="44.0" prefWidth="74.0" text="⏸" visible="false" />
+            <Button fx:id="playButton" mnemonicParsing="false" onMouseClicked="#playOnline" prefHeight="45.0" prefWidth="230.0" text="在线播放" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
